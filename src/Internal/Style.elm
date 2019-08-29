@@ -256,9 +256,6 @@ classes =
     , inputMultilineParent = "imlp"
     , inputMultilineFiller = "imlf"
     , inputMultilineWrapper = "implw"
-
-    -- link
-    , link = "lnk"
     }
 
 
@@ -710,7 +707,7 @@ input[type="search"]::-webkit-search-results-decoration {
 sliderReset =
     """
 input[type=range] {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   background: transparent;
   position:absolute;
   left:0;
@@ -1231,16 +1228,15 @@ baseSheet =
                 , Descriptor (dot classes.widthExact)
                     [ Prop "flex-basis" "auto"
                     ]
-                , Descriptor (dot classes.link)
-                    [ Prop "flex-basis" "auto"
-                    ]
                 ]
             , Child (dot classes.heightFill)
-                [ -- alignTop, centerY, and alignBottom need to be disabled
+                [ --Prop "height" "100%"
+                  -- alignTop, centerY, and alignBottom need to be disabled
                   Prop "align-self" "stretch !important"
                 ]
             , Child (dot classes.heightFillPortion)
-                [ -- alignTop, centerY, and alignBottom need to be disabled
+                [ --Prop "height" "100%"
+                  -- alignTop, centerY, and alignBottom need to be disabled
                   Prop "align-self" "stretch !important"
                 ]
 
